@@ -1,0 +1,1 @@
+{'mail': 'aa.aa@aa.aa', 'log': 'log.txt', 'data': 'data.txt'}
