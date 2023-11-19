@@ -51,8 +51,12 @@ class MyPrompt(cmd.Cmd):
     def do_update(self, mode):
         with open(self.files["data"], "r") as file:
             line = file.readlines()[0]
-            print(line)
-            print(json.loads(line))
+            line = line.replace("'", '"')
+            data = json.loads(line)
+            self.client["mail"] = data["mail"]
+            self.files["log"] = data["log"]
+            self.files["data"] = data["data"]
+            
     def do_save(self, none):
         "Save settings : To file"
         with open(self.files["data"], "w") as file:
